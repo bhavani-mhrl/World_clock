@@ -1,4 +1,4 @@
-setInterval(function(){
+function updateTime(){
     let losAngelesDateElement=document.querySelector("#los-angeles-date");
     let losAngelesTimeElement=document.querySelector("#los-angeles-time");
     let losAngelesTime=moment().tz("America/Los_Angeles");
@@ -10,6 +10,7 @@ setInterval(function(){
     let parisTime=moment().tz("Europe/Paris");
     parisDateElement.innerHTML=`${moment().format("MMMM Do YYYY")}`;
     parisTimeElement.innerHTML=`${parisTime.format(`h:mm:ss [<small>]A[</small>]`)}`;
+}
 
-
-},1000);
+updateTime();
+setInterval(updateTime,1000);
