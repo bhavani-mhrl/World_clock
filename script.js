@@ -29,6 +29,8 @@ function updateCity(e){
                 <div class="date" id="los-angeles-date">${cityTimezone.format("MMMM Do YYYY")}</div>
             </div>
             <div class="time" id="los-angeles-time">${cityTimezone.format("h:mm:ss")} <small>${cityTimezone.format("A")}</small></div>    
+        </div>
+            <a href="/">All cities</a>
     `;
     console.log(cityElement);
 }
